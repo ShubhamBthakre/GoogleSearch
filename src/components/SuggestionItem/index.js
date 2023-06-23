@@ -1,13 +1,9 @@
-// Write your code here
-
-import './index.css'
-
 const SuggestionItem = props => {
-  const {suggestionItem, onClickSuggestionArrow} = props
-  const {suggestion} = suggestionItem
+  const {suggestionDetails, updateSearchInput} = props
+  const {suggestion} = suggestionDetails
 
-  const byClickSuggestionArrow = () => {
-    onClickSuggestionArrow(suggestion)
+  const onClickSuggestion = () => {
+    updateSearchInput(suggestion)
   }
 
   return (
@@ -16,7 +12,7 @@ const SuggestionItem = props => {
       <button
         type="button"
         className="arrow-button"
-        onClick={byClickSuggestionArrow}
+        onClick={onClickSuggestion}
       >
         <img
           src="https://assets.ccbp.in/frontend/react-js/diagonal-arrow-left-up.png"
