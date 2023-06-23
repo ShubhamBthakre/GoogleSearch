@@ -1,10 +1,9 @@
-/* Write your CSS here */
-
-.google-Suggestions-container {
+.app-container {
   display: flex;
   justify-content: center;
 }
-.cart-container {
+
+.google-suggestions-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +11,10 @@
 }
 
 @media screen and (min-width: 768px) {
-  .cart-container {
+  .google-suggestions-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 250px;
   }
 }
@@ -29,22 +31,23 @@
   }
 }
 
-.suggestion-item-bg-container {
-  box-shadow: 0px 0px 10px 0px #bfbfbf;
+.search-input-suggestions-container {
   width: 300px;
-  margin-top: 30px;
   border-radius: 12px;
+  margin-top: 24px;
+  box-shadow: 0px 0px 10px 0px #bfbfbf;
 }
 
 @media screen and (min-width: 768px) {
-  .suggestion-item-bg-container {
+  .search-input-suggestions-container {
     width: 600px;
+    border-radius: 20px;
+    margin-top: 48px;
   }
 }
 
-.input-container {
+.search-input-container {
   display: flex;
-  flex-direction: row;
   align-items: center;
   padding-top: 4px;
   padding-left: 8px;
@@ -52,9 +55,20 @@
   padding-right: 8px;
 }
 
+@media screen and (min-width: 768px) {
+  .search-input-container {
+    display: flex;
+    align-items: center;
+    padding-top: 4px;
+    padding-left: 12px;
+    padding-bottom: 4px;
+    padding-right: 12px;
+  }
+}
+
 .search-icon {
-  height: 16px;
   width: 16px;
+  height: 16px;
 }
 
 @media screen and (min-width: 768px) {
@@ -64,27 +78,30 @@
   }
 }
 
-.input-element {
-  font-size: 16px;
-  font-family: 'Roboto';
+.search-input {
   color: #64748b;
-  outline: none;
-  border: none;
+  font-family: 'Roboto';
+  font-size: 16px;
   width: 100%;
   height: 40px;
+  border: none;
   margin-left: 16px;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
-  .input-element {
+  .search-input {
     font-size: 20px;
+    height: 40px;
+    margin-left: 8px;
   }
 }
 
-.suggestion-items-container {
+.suggestions-list {
   padding-left: 12px;
-  padding-right: 12px;
-  margin: 0px;
+  padding-right: 16px;
+  padding-bottom: 12px;
+  margin: 0;
 }
 
 @media screen and (min-width: 768px) {
